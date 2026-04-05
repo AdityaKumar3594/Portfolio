@@ -532,3 +532,10 @@ img { max-width: 100%; }
 [data-theme="light"] .preview-block { background: rgba(139,92,246,0.1); }
 [data-theme="light"] .form-group input, [data-theme="light"] .form-group textarea { background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.15); color: var(--text); }
 [data-theme="light"] #heroCanvas { opacity: 0.4; }
+
+/* ===== EXTRAS ===== */
+.ach-cert-link {
+  color: var(--purple-light); font-size: .78rem; font-weight: 600;
+  text-decoration: none; transition: var(--transition);
+}
+.ach-cert-link:hover { color: var(--cyan); text-decoration: underline; }
