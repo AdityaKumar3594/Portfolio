@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aditya Kumar — AI & Full-Stack Engineer</title>
-  <meta name="description" content="Aditya Kumar — B.Tech AI & Data Science student at Shiv Nadar University. Building AI products and full-stack systems." />
+  <meta name="description" content="Aditya Kumar — B.Tech AI & Data Science student at Shiv Nadar University. Building AI systems and full-stack products." />
   <meta property="og:title" content="Aditya Kumar — AI & Full-Stack Engineer" />
-  <meta property="og:description" content="Building AI products that turn ideas into intelligent systems." />
+  <meta property="og:description" content="Systems that think. Code that ships." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -27,14 +27,14 @@
       <li><a href="#achievements" class="nav-link">Achievements</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-      <span class="theme-icon">☀</span>
+    <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
+      <span class="theme-icon" aria-hidden="true">◑</span>
     </button>
-    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
-  <div class="nav-mobile" id="navMobile">
+  <div class="nav-mobile" id="navMobile" role="navigation" aria-label="Mobile navigation">
     <a href="#about" class="nav-link">About</a>
     <a href="#skills" class="nav-link">Skills</a>
     <a href="#projects" class="nav-link">Projects</a>
@@ -47,55 +47,47 @@
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <canvas id="heroCanvas"></canvas>
+  <div class="hero-grid-bg" aria-hidden="true"></div>
   <div class="hero-content">
     <div class="hero-badge reveal">
-      <span class="badge-dot"></span>
-      Available for internships & collaborations
+      <span class="badge-dot" aria-hidden="true"></span>
+      Available for internships &amp; collaborations
     </div>
     <h1 class="hero-title reveal">
-      Building AI products<br/>
-      <span class="gradient-text">that turn ideas into</span><br/>
-      intelligent systems.
+      <span id="typewriter-target"></span><span class="hero-cursor" id="heroCursor" aria-hidden="true"></span>
     </h1>
     <p class="hero-sub reveal">
-      AI + Full-Stack Engineer · Competitive Programmer · Merit Scholar<br/>
-      B.Tech. Artificial Intelligence & Data Science · Shiv Nadar University, Chennai
+      AI + Full-Stack Engineer &middot; Competitive Programmer &middot; Merit Scholar<br/>
+      B.Tech. Artificial Intelligence &amp; Data Science &middot; Shiv Nadar University, Chennai
     </p>
     <div class="hero-cta reveal">
       <a href="#projects" class="btn btn-primary">View Projects</a>
       <a href="resume.pdf" class="btn btn-outline" download>Download Resume</a>
       <a href="#contact" class="btn btn-ghost">Contact Me</a>
     </div>
-    <div class="hero-stats reveal">
-      <div class="stat-item">
-        <span class="stat-num" data-target="858" data-suffix="">8.58</span>
+    <div class="hero-stats reveal" role="list">
+      <div class="stat-item" role="listitem">
+        <span class="stat-num" data-target="856" data-suffix="" data-decimal="true">8.56</span>
         <span class="stat-label">CGPA / 10</span>
       </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num" data-target="3" data-suffix="+">0</span>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item" role="listitem">
+        <span class="stat-num" data-target="4" data-suffix="+">0</span>
         <span class="stat-label">AI Projects</span>
       </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num" data-target="400" data-suffix="+">0</span>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item" role="listitem">
+        <span class="stat-num" data-target="500" data-suffix="+">0</span>
         <span class="stat-label">Problems Solved</span>
       </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item" role="listitem">
         <span class="stat-num" data-target="100" data-suffix="%">0</span>
         <span class="stat-label">Merit Scholarship</span>
       </div>
     </div>
   </div>
-  <div class="hero-monogram reveal">
-    <div class="monogram-ring ring1"></div>
-    <div class="monogram-ring ring2"></div>
-    <div class="monogram-ring ring3"></div>
-    <div class="monogram-inner">AK</div>
-  </div>
-  <div class="scroll-indicator">
+  <div class="scroll-indicator" aria-hidden="true">
     <div class="scroll-line"></div>
     <span>scroll</span>
   </div>
@@ -107,58 +99,58 @@
     <div class="section-label reveal">// about me</div>
     <div class="about-grid">
       <div class="about-text reveal">
-        <h2 class="section-title">Turning curiosity into<br/><span class="gradient-text">systems that work.</span></h2>
+        <h2 class="section-title">Turning curiosity into<br/><span style="color:var(--rust)">systems that work.</span></h2>
         <p class="about-para">
-          I'm Aditya Kumar — a second-year B.Tech. student in Artificial Intelligence and Data Science at Shiv Nadar University, Chennai. I build things at the intersection of AI and full-stack engineering: products that are technically rigorous, practically useful, and thoughtfully designed.
+          I'm Aditya Kumar — a second-year B.Tech. student in Artificial Intelligence and Data Science at Shiv Nadar University, Chennai. I build at the intersection of AI and full-stack engineering: products that are technically rigorous, practically useful, and thoughtfully designed.
         </p>
         <p class="about-para">
-          I was selected for VidyaGyan Leadership Academy through a highly competitive national process — chosen from over 200,000 applicants — and I hold a 100% merit scholarship at SNU. My CGPA of 8.58 reflects steady execution, not just potential.
+          I was selected for VidyaGyan Leadership Academy through a highly competitive national process — chosen from over 200,000 applicants — and I hold a 100% merit scholarship at SNU. My CGPA of 8.56 reflects steady execution, not just potential.
         </p>
         <p class="about-para">
           Outside coursework, I'm deep in competitive programming, building AI-powered tools, and exploring how large language models can be applied to real problems. I think in systems, ship in sprints, and care about the craft.
         </p>
         <div class="about-tags">
-          <span class="tag">AI Systems</span>
-          <span class="tag">Full-Stack Dev</span>
-          <span class="tag">ML Engineering</span>
-          <span class="tag">Product Thinking</span>
-          <span class="tag">Competitive Programming</span>
+          <span class="about-tag">AI Systems</span>
+          <span class="about-tag">Full-Stack Dev</span>
+          <span class="about-tag">ML Engineering</span>
+          <span class="about-tag">Product Thinking</span>
+          <span class="about-tag">Competitive Programming</span>
         </div>
       </div>
       <div class="about-card reveal">
-        <div class="about-info-card glass">
+        <div class="about-info-card">
           <div class="info-row">
-            <span class="info-icon">🎓</span>
+            <span class="info-key">University</span>
             <div>
               <div class="info-title">Shiv Nadar University, Chennai</div>
-              <div class="info-sub">B.Tech. AI & Data Science · 2023–2027</div>
+              <div class="info-sub">B.Tech. AI &amp; Data Science &middot; 2023–2027</div>
             </div>
           </div>
           <div class="info-row">
-            <span class="info-icon">🏅</span>
+            <span class="info-key">Scholarship</span>
             <div>
               <div class="info-title">Merit Scholarship — 100% Tuition</div>
               <div class="info-sub">Academic excellence recognition</div>
             </div>
           </div>
           <div class="info-row">
-            <span class="info-icon">🏫</span>
+            <span class="info-key">School</span>
             <div>
               <div class="info-title">VidyaGyan Leadership Academy</div>
-              <div class="info-sub">Selected from 200,000+ applicants · Full residential scholarship</div>
+              <div class="info-sub">Selected from 200,000+ applicants &middot; Full residential scholarship</div>
             </div>
           </div>
           <div class="info-row">
-            <span class="info-icon">📍</span>
+            <span class="info-key">Location</span>
             <div>
               <div class="info-title">Chennai, India</div>
-              <div class="info-sub">Open to remote & relocation</div>
+              <div class="info-sub">Open to remote &amp; relocation</div>
             </div>
           </div>
           <div class="info-row">
-            <span class="info-icon">⭐</span>
+            <span class="info-key">CGPA</span>
             <div>
-              <div class="info-title">CGPA: 8.58 / 10</div>
+              <div class="info-title">8.56 / 10</div>
               <div class="info-sub">Consistent academic performance</div>
             </div>
           </div>
@@ -170,77 +162,90 @@
 
 <!-- SKILLS -->
 <section class="section skills" id="skills">
-  <canvas id="skillsCanvas"></canvas>
   <div class="container">
     <div class="section-label reveal">// skills</div>
     <h2 class="section-title reveal">The stack I build with.</h2>
     <div class="skills-grid">
-      <div class="skill-group reveal glass">
+
+      <div class="skill-group reveal">
         <div class="skill-group-header">
-          <span class="skill-group-icon">⌨</span>
           <span class="skill-group-name">Languages</span>
         </div>
         <div class="skill-chips">
-          <span class="chip chip-primary">Python</span>
-          <span class="chip chip-primary">JavaScript</span>
-          <span class="chip chip-primary">SQL</span>
+          <span class="chip">Python</span>
+          <span class="chip">JavaScript (ES6+)</span>
+          <span class="chip">SQL</span>
+          <span class="chip">C</span>
         </div>
       </div>
-      <div class="skill-group reveal glass">
+
+      <div class="skill-group reveal">
         <div class="skill-group-header">
-          <span class="skill-group-icon">🖥</span>
-          <span class="skill-group-name">Frontend</span>
-        </div>
-        <div class="skill-chips">
-          <span class="chip chip-blue">React</span>
-          <span class="chip chip-blue">Streamlit</span>
-          <span class="chip chip-blue">Vite</span>
-        </div>
-      </div>
-      <div class="skill-group reveal glass">
-        <div class="skill-group-header">
-          <span class="skill-group-icon">⚙</span>
-          <span class="skill-group-name">Backend</span>
-        </div>
-        <div class="skill-chips">
-          <span class="chip chip-green">FastAPI</span>
-          <span class="chip chip-green">Node.js</span>
-          <span class="chip chip-green">Express.js</span>
-        </div>
-      </div>
-      <div class="skill-group reveal glass">
-        <div class="skill-group-header">
-          <span class="skill-group-icon">🗄</span>
-          <span class="skill-group-name">Databases</span>
-        </div>
-        <div class="skill-chips">
-          <span class="chip chip-orange">MongoDB</span>
-          <span class="chip chip-orange">Mongoose</span>
-        </div>
-      </div>
-      <div class="skill-group reveal glass">
-        <div class="skill-group-header">
-          <span class="skill-group-icon">🤖</span>
           <span class="skill-group-name">AI / ML</span>
         </div>
         <div class="skill-chips">
-          <span class="chip chip-purple">PyTorch</span>
-          <span class="chip chip-purple">Google GenAI</span>
-          <span class="chip chip-purple">ClinicalBERT</span>
-          <span class="chip chip-purple">TF-IDF</span>
+          <span class="chip">PyTorch</span>
+          <span class="chip">Transformers</span>
+          <span class="chip">NLP</span>
+          <span class="chip">Prompt Engineering</span>
+          <span class="chip">LLMs</span>
+          <span class="chip">Generative AI</span>
         </div>
       </div>
-      <div class="skill-group reveal glass">
+
+      <div class="skill-group reveal">
         <div class="skill-group-header">
-          <span class="skill-group-icon">☁</span>
-          <span class="skill-group-name">Tools & Cloud</span>
+          <span class="skill-group-name">Frameworks &amp; Libraries</span>
         </div>
         <div class="skill-chips">
-          <span class="chip chip-cyan">Git</span>
-          <span class="chip chip-cyan">GitHub</span>
-          <span class="chip chip-cyan">Google Cloud</span>
+          <span class="chip">LangChain</span>
+          <span class="chip">React</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">Express.js</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Streamlit</span>
         </div>
       </div>
+
+      <div class="skill-group reveal">
+        <div class="skill-group-header">
+          <span class="skill-group-name">Databases</span>
+        </div>
+        <div class="skill-chips">
+          <span class="chip">MongoDB</span>
+          <span class="chip">SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal">
+        <div class="skill-group-header">
+          <span class="skill-group-name">APIs &amp; Tools</span>
+        </div>
+        <div class="skill-chips">
+          <span class="chip">REST APIs</span>
+          <span class="chip">Tavily API</span>
+          <span class="chip">TMDB API</span>
+          <span class="chip">OpenRouter API</span>
+          <span class="chip">BeautifulSoup</span>
+          <span class="chip">Git</span>
+          <span class="chip">GitHub</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal">
+        <div class="skill-group-header">
+          <span class="skill-group-name">Concepts</span>
+        </div>
+        <div class="skill-chips">
+          <span class="chip">Multi-Agent Systems</span>
+          <span class="chip">Semantic Search</span>
+          <span class="chip">Information Retrieval</span>
+          <span class="chip">Recommendation Systems</span>
+          <span class="chip">Tool Calling</span>
+          <span class="chip">API Integration</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -252,49 +257,88 @@
     <h2 class="section-title reveal">Things I've built.</h2>
     <div class="projects-grid">
 
-      <!-- Project 1 -->
-      <div class="project-card reveal glass">
-        <div class="project-glow glow-purple"></div>
+      <!-- Project: Multi-Agent Research System -->
+      <div class="project-card reveal">
         <div class="project-header">
-          <div class="project-number">01</div>
+          <span style="font-family:var(--mono);font-size:0.7rem;color:var(--ink-muted)">2026</span>
           <div class="project-links">
-            <a href="https://resume-analyzer-nine-xi.vercel.app" target="_blank" rel="noopener" class="project-link" aria-label="Live Demo">↗ Demo</a>
-            <a href="https://github.com/AdityaKumar3594" target="_blank" rel="noopener" class="project-link" aria-label="GitHub">⌥ GitHub</a>
+            <a href="https://multi-agent-research.streamlit.app" target="_blank" rel="noopener" class="project-link" aria-label="Live demo for Multi-Agent Research System">↗ Demo</a>
+            <a href="https://github.com/AdityaKumar3594" target="_blank" rel="noopener" class="project-link" aria-label="GitHub for Multi-Agent Research System">GitHub</a>
           </div>
         </div>
-        <div class="project-preview preview-resume">
+        <div class="project-preview project-preview--screenshot">
+          <img src="image3.png" alt="Multi-Agent Research System — agent pipeline interface" loading="lazy" />
+        </div>
+        <h3 class="project-title">Multi-Agent Research System</h3>
+        <p class="project-desc">Autonomous research pipeline using LangChain multi-agent orchestration. Agents collaborate to search, scrape, synthesise, and deliver structured reports on any topic.</p>
+        <ul class="project-bullets">
+          <li>LangChain agent graph with Mistral AI for reasoning and Tavily for real-time web search</li>
+          <li>BeautifulSoup scraper + structured output formatting via Streamlit</li>
+        </ul>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">LangChain</span>
+          <span class="stack-tag">Mistral AI</span>
+          <span class="stack-tag">Tavily API</span>
+          <span class="stack-tag">BeautifulSoup</span>
+          <span class="stack-tag">Streamlit</span>
+        </div>
+      </div>
+
+      <!-- Project: Plagiarism Detection -->
+      <div class="project-card reveal">
+        <div class="project-header">
+          <span style="font-family:var(--mono);font-size:0.7rem;color:var(--ink-muted)">2026</span>
+          <div class="project-links">
+            <a href="https://github.com/AdityaKumar3594" target="_blank" rel="noopener" class="project-link" aria-label="GitHub for Plagiarism Detection System">GitHub</a>
+          </div>
+        </div>
+        <div class="project-preview">
           <div class="preview-ui">
-            <div class="preview-bar">
-              <span></span><span></span><span></span>
-            </div>
+            <div class="preview-bar"><span></span><span></span><span></span></div>
             <div class="preview-content">
+              <div class="metrics-row">
+                <div class="metric-pill">Similarity <strong>94%</strong></div>
+                <div class="metric-pill">NLP <strong>SPECTER</strong></div>
+              </div>
               <div class="preview-row wide"></div>
               <div class="preview-row medium"></div>
-              <div class="preview-cols">
-                <div class="preview-col">
-                  <div class="preview-block"></div>
-                  <div class="preview-block short"></div>
-                </div>
-                <div class="preview-col">
-                  <div class="preview-block"></div>
-                  <div class="preview-block short"></div>
-                </div>
-              </div>
-              <div class="preview-score">
-                <div class="score-ring">
-                  <svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" fill="none" stroke="rgba(139,92,246,0.2)" stroke-width="3"/><circle cx="18" cy="18" r="15" fill="none" stroke="#8b5cf6" stroke-width="3" stroke-dasharray="78 94" stroke-linecap="round" transform="rotate(-90 18 18)"/></svg>
-                  <span>83%</span>
-                </div>
-                <div class="score-label">Match Score</div>
-              </div>
+              <div class="preview-row short"></div>
+              <div class="api-badge">Academic · PyTorch · C</div>
             </div>
           </div>
         </div>
-        <h3 class="project-title">Resume Analyzer — AI Interview Coach</h3>
-        <p class="project-desc">Full-stack AI platform that analyzes resumes against job descriptions, generates personalized interview strategies, and produces skill-gap reports with automated PDF output.</p>
+        <h3 class="project-title">Academic Plagiarism Detection System</h3>
+        <p class="project-desc">Semantic plagiarism detector for academic text using SPECTER embeddings and cosine similarity. Built with a C-based preprocessor and a Streamlit frontend for document comparison.</p>
         <ul class="project-bullets">
-          <li>JWT auth, file uploads via Multer, PDF parsing & generation with Puppeteer</li>
-          <li>Reports dashboard for history tracking and side-by-side comparisons</li>
+          <li>SPECTER transformer embeddings for domain-aware academic text similarity</li>
+          <li>C module handles tokenisation and preprocessing for performance</li>
+        </ul>
+        <div class="project-stack">
+          <span class="stack-tag">PyTorch</span>
+          <span class="stack-tag">NLP</span>
+          <span class="stack-tag">SPECTER</span>
+          <span class="stack-tag">Streamlit</span>
+          <span class="stack-tag">C</span>
+        </div>
+      </div>
+
+      <!-- Project: Resume Analyzer -->
+      <div class="project-card reveal">
+        <div class="project-header">
+          <span style="font-family:var(--mono);font-size:0.7rem;color:var(--ink-muted)">2025</span>
+          <div class="project-links">
+            <a href="https://resume-analyzer-nine-xi.vercel.app" target="_blank" rel="noopener" class="project-link" aria-label="Live demo for Resume Analyzer">↗ Demo</a>
+            <a href="https://github.com/AdityaKumar3594" target="_blank" rel="noopener" class="project-link" aria-label="GitHub for Resume Analyzer">GitHub</a>
+          </div>
+        </div>
+        <div class="project-preview project-preview--screenshot">
+          <img src="image.png" alt="Resume Analyzer AI Interview Coach — dashboard showing resume match score and analysis" loading="lazy" />
+        </div>
+        <h3 class="project-title">Resume Analyzer &mdash; AI Interview Coach</h3>
+        <p class="project-desc">Full-stack platform that analyses resumes against job descriptions, generates personalised interview strategies, and produces skill-gap reports with automated PDF output.</p>
+        <ul class="project-bullets">
+          <li>JWT auth, file uploads via Multer, PDF parsing &amp; generation with Puppeteer</li>
           <li>Powered by Google GenAI for contextual analysis and recommendations</li>
         </ul>
         <div class="project-stack">
@@ -307,38 +351,23 @@
         </div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="project-card reveal glass">
-        <div class="project-glow glow-blue"></div>
+      <!-- Project: Movie Recommender -->
+      <div class="project-card reveal">
         <div class="project-header">
-          <div class="project-number">02</div>
+          <span style="font-family:var(--mono);font-size:0.7rem;color:var(--ink-muted)">2025</span>
           <div class="project-links">
-            <a href="https://movie-recommender-system-pqst8w29bgzp4jhdskaced.streamlit.app/" target="_blank" rel="noopener" class="project-link">↗ Demo</a>
-            <a href="https://github.com/AdityaKumar3594" target="_blank" rel="noopener" class="project-link">⌥ GitHub</a>
+            <a href="https://movie-recommender-system-pqst8w29bgzp4jhdskaced.streamlit.app/" target="_blank" rel="noopener" class="project-link" aria-label="Live demo for Movie Recommender System">↗ Demo</a>
+            <a href="https://github.com/AdityaKumar3594" target="_blank" rel="noopener" class="project-link" aria-label="GitHub for Movie Recommender System">GitHub</a>
           </div>
         </div>
-        <div class="project-preview preview-movie">
-          <div class="preview-ui">
-            <div class="preview-bar"><span></span><span></span><span></span></div>
-            <div class="preview-content">
-              <div class="movie-cards-row">
-                <div class="movie-card-mini" style="--c:#6366f1"></div>
-                <div class="movie-card-mini" style="--c:#8b5cf6"></div>
-                <div class="movie-card-mini" style="--c:#06b6d4"></div>
-                <div class="movie-card-mini" style="--c:#10b981"></div>
-              </div>
-              <div class="preview-row medium"></div>
-              <div class="preview-row short"></div>
-              <div class="api-badge">TMDB API · 50K+ movies</div>
-            </div>
-          </div>
+        <div class="project-preview project-preview--screenshot">
+          <img src="image2.png" alt="Movie Recommender System — trending home feed showing movie posters" loading="lazy" />
         </div>
         <h3 class="project-title">Movie Recommender System</h3>
         <p class="project-desc">Content-based recommendation engine over 50,000+ movies with a FastAPI backend, real-time TMDB metadata, and an interactive Streamlit frontend.</p>
         <ul class="project-bullets">
-          <li>TF-IDF vectorization for semantic content similarity matching</li>
-          <li>6 REST endpoints covering search, trending, and personalized picks</li>
-          <li>Real-time poster and metadata fetching from TMDB API</li>
+          <li>TF-IDF vectorisation for semantic content similarity matching</li>
+          <li>6 REST endpoints covering search, trending, and personalised picks</li>
         </ul>
         <div class="project-stack">
           <span class="stack-tag">FastAPI</span>
@@ -346,50 +375,6 @@
           <span class="stack-tag">Python</span>
           <span class="stack-tag">TF-IDF</span>
           <span class="stack-tag">TMDB API</span>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-card reveal glass">
-        <div class="project-glow glow-green"></div>
-        <div class="project-header">
-          <div class="project-number">03</div>
-          <div class="project-links">
-            <a href="https://medical-transcription-001.streamlit.app/" target="_blank" rel="noopener" class="project-link">↗ Demo</a>
-            <a href="https://github.com/AdityaKumar3594" target="_blank" rel="noopener" class="project-link">⌥ GitHub</a>
-          </div>
-        </div>
-        <div class="project-preview preview-medical">
-          <div class="preview-ui">
-            <div class="preview-bar"><span></span><span></span><span></span></div>
-            <div class="preview-content">
-              <div class="metrics-row">
-                <div class="metric-pill">Acc <strong>91%</strong></div>
-                <div class="metric-pill">F1 <strong>89%</strong></div>
-                <div class="metric-pill">Prec <strong>90%</strong></div>
-              </div>
-              <div class="confusion-mini">
-                <div class="cm-row"><div class="cm-cell high"></div><div class="cm-cell low"></div><div class="cm-cell low"></div></div>
-                <div class="cm-row"><div class="cm-cell low"></div><div class="cm-cell high"></div><div class="cm-cell med"></div></div>
-                <div class="cm-row"><div class="cm-cell low"></div><div class="cm-cell med"></div><div class="cm-cell high"></div></div>
-              </div>
-              <div class="api-badge">10 Medical Specialties</div>
-            </div>
-          </div>
-        </div>
-        <h3 class="project-title">Medical Transcription AI Assistant</h3>
-        <p class="project-desc">AI system that transcribes and classifies medical text into 10 clinical specialties using fine-tuned transformer models and LLM-powered analysis.</p>
-        <ul class="project-bullets">
-          <li>Supports audio upload, live recording, and PDF parsing workflows</li>
-          <li>ClinicalBERT + PubMedBERT for domain-specific NLP classification</li>
-          <li>91% accuracy across 10 specialties with full evaluation metrics dashboard</li>
-        </ul>
-        <div class="project-stack">
-          <span class="stack-tag">PyTorch</span>
-          <span class="stack-tag">ClinicalBERT</span>
-          <span class="stack-tag">PubMedBERT</span>
-          <span class="stack-tag">Streamlit</span>
-          <span class="stack-tag">OpenRouter API</span>
         </div>
       </div>
 
@@ -402,43 +387,43 @@
   <div class="container">
     <div class="section-label reveal">// experience</div>
     <h2 class="section-title reveal">Where I've worked.</h2>
-    <div class="exp-card reveal glass">
+    <div class="exp-card reveal">
       <div class="exp-left">
-        <div class="exp-logo">🛰</div>
-        <div class="exp-timeline-line"></div>
+        <div class="exp-dot" aria-hidden="true"></div>
+        <div class="exp-timeline-line" aria-hidden="true"></div>
       </div>
       <div class="exp-right">
         <div class="exp-meta">
           <div class="exp-badges">
-            <span class="exp-badge badge-isro">ISRO Registered</span>
-            <span class="exp-badge badge-dpiit">DPIIT Recognised</span>
+            <span class="exp-badge">ISRO Registered</span>
+            <span class="exp-badge">DPIIT Recognised</span>
           </div>
           <span class="exp-date">Jan 2025</span>
         </div>
         <h3 class="exp-title">Space Technology Intern</h3>
-        <div class="exp-company">Agnirva.com · Remote</div>
+        <div class="exp-company">Agnirva.com &middot; Remote</div>
         <p class="exp-desc">
-          Completed an intensive 8-week program spanning ~80 hours and ~440 structured modules covering satellite systems, orbital mechanics, space technology fundamentals, and applied problem-solving in the space domain.
+          Completed an intensive program spanning satellite systems, orbital mechanics, space technology fundamentals, and applied problem-solving in the space domain — structured as a rigorous modular curriculum.
         </p>
-        <div class="exp-highlights">
-          <div class="exp-highlight">
+        <div class="exp-highlights" role="list">
+          <div class="exp-highlight" role="listitem">
             <span class="highlight-num">8</span>
             <span class="highlight-label">Weeks</span>
           </div>
-          <div class="exp-highlight">
+          <div class="exp-highlight" role="listitem">
             <span class="highlight-num">~80</span>
             <span class="highlight-label">Hours</span>
           </div>
-          <div class="exp-highlight">
+          <div class="exp-highlight" role="listitem">
             <span class="highlight-num">~440</span>
             <span class="highlight-label">Modules</span>
           </div>
         </div>
         <div class="exp-tags">
-          <span class="tag">Satellite Systems</span>
-          <span class="tag">Orbital Mechanics</span>
-          <span class="tag">Space Technology</span>
-          <span class="tag">Applied Problem Solving</span>
+          <span class="exp-tag">Satellite Systems</span>
+          <span class="exp-tag">Orbital Mechanics</span>
+          <span class="exp-tag">Space Technology</span>
+          <span class="exp-tag">Applied Problem Solving</span>
         </div>
       </div>
     </div>
@@ -450,33 +435,33 @@
   <div class="container">
     <div class="section-label reveal">// certifications</div>
     <h2 class="section-title reveal">Credentials that count.</h2>
-    <div class="certs-list">
-      <div class="cert-card reveal glass">
-        <div class="cert-icon cert-google">G</div>
+    <div class="certs-list reveal">
+      <div class="cert-card">
+        <div class="cert-icon" aria-label="Google">G</div>
         <div class="cert-info">
           <h3 class="cert-title">Google Cloud Career Launchpad</h3>
           <div class="cert-sub">Data Analytics Track</div>
-          <div class="cert-issuer">Google Cloud · Feb 2026</div>
+          <div class="cert-issuer">Google Cloud &middot; Feb 2026</div>
         </div>
-        <a href="https://drive.google.com/file/d/1wsvA4DlbpFi17O1psXWr_p86LvChEV5C/view?usp=drive_link" target="_blank" rel="noopener" class="cert-link" aria-label="View certificate">↗</a>
+        <a href="https://drive.google.com/file/d/1wsvA4DlbpFi17O1psXWr_p86LvChEV5C/view?usp=drive_link" target="_blank" rel="noopener" class="cert-link" aria-label="View Google Cloud certificate">↗</a>
       </div>
-      <div class="cert-card reveal glass">
-        <div class="cert-icon cert-columbia">C</div>
+      <div class="cert-card">
+        <div class="cert-icon" aria-label="Columbia">C</div>
         <div class="cert-info">
           <h3 class="cert-title">Machine Learning</h3>
           <div class="cert-sub">Columbia+ Professional Certificate</div>
-          <div class="cert-issuer">Columbia University · Sep 2025</div>
+          <div class="cert-issuer">Columbia University &middot; Sep 2025</div>
         </div>
-        <a href="https://drive.google.com/file/d/1gWRA65Cp3sDkcE41huqIN5tMtufpVGC9/view?usp=drive_link" target="_blank" rel="noopener" class="cert-link">↗</a>
+        <a href="https://drive.google.com/file/d/1gWRA65Cp3sDkcE41huqIN5tMtufpVGC9/view?usp=drive_link" target="_blank" rel="noopener" class="cert-link" aria-label="View Columbia ML certificate">↗</a>
       </div>
-      <div class="cert-card reveal glass">
-        <div class="cert-icon cert-stanford">S</div>
+      <div class="cert-card">
+        <div class="cert-icon" aria-label="Stanford">S</div>
         <div class="cert-info">
           <h3 class="cert-title">Supervised Machine Learning</h3>
-          <div class="cert-sub">Regression & Classification</div>
-          <div class="cert-issuer">DeepLearning.AI / Stanford University · Nov 2024</div>
+          <div class="cert-sub">Regression &amp; Classification</div>
+          <div class="cert-issuer">DeepLearning.AI / Stanford University &middot; Nov 2024</div>
         </div>
-        <a href="https://drive.google.com/file/d/1CC1QZ6uTBh6Ja0UOfq0ULwKZ75cgYwdW/view?usp=drive_link" target="_blank" rel="noopener" class="cert-link">↗</a>
+        <a href="https://drive.google.com/file/d/1CC1QZ6uTBh6Ja0UOfq0ULwKZ75cgYwdW/view?usp=drive_link" target="_blank" rel="noopener" class="cert-link" aria-label="View Stanford ML certificate">↗</a>
       </div>
     </div>
   </div>
@@ -491,55 +476,61 @@
       <div class="ach-section reveal">
         <h3 class="ach-section-title">Competitive Programming</h3>
         <div class="ach-cards">
-          <div class="ach-card glass">
-            <div class="ach-platform lc">LC</div>
+          <div class="ach-card">
+            <div class="ach-platform" aria-label="LeetCode">LC</div>
             <div class="ach-details">
               <div class="ach-platform-name">LeetCode</div>
               <div class="ach-stats-row">
-                <div class="ach-stat"><span class="ach-num">400+</span><span class="ach-label">Solved</span></div>
-                <div class="ach-stat"><span class="ach-num">1389</span><span class="ach-label">Rating</span></div>
+                <div class="ach-stat"><span class="ach-num">500+</span><span class="ach-label">Solved</span></div>
+                <div class="ach-stat"><span class="ach-num">1345</span><span class="ach-label">Rating</span></div>
                 <div class="ach-stat"><span class="ach-num">1450</span><span class="ach-label">Max</span></div>
               </div>
-              <div class="rating-bar"><div class="rating-fill" style="--pct:77%"></div></div>
+              <div class="rating-bar" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100" aria-label="LeetCode rating progress">
+                <div class="rating-fill" style="--pct:93%"></div>
+              </div>
             </div>
           </div>
-          <div class="ach-card glass">
-            <div class="ach-platform cf">CF</div>
+          <div class="ach-card">
+            <div class="ach-platform" aria-label="Codeforces">CF</div>
             <div class="ach-details">
               <div class="ach-platform-name">Codeforces</div>
               <div class="ach-stats-row">
-                <div class="ach-stat"><span class="ach-num">858</span><span class="ach-label">Rating</span></div>
+                <div class="ach-stat"><span class="ach-num">888</span><span class="ach-label">Rating</span></div>
                 <div class="ach-stat"><span class="ach-num">1048</span><span class="ach-label">Max</span></div>
               </div>
-              <div class="rating-bar"><div class="rating-fill" style="--pct:52%"></div></div>
+              <div class="rating-bar" role="progressbar" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100" aria-label="Codeforces rating progress">
+                <div class="rating-fill" style="--pct:52%"></div>
+              </div>
             </div>
           </div>
-          <div class="ach-card glass">
-            <div class="ach-platform cs">CS</div>
+          <div class="ach-card">
+            <div class="ach-platform" aria-label="CodeStudio">CS</div>
             <div class="ach-details">
               <div class="ach-platform-name">CodeStudio</div>
               <div class="ach-stats-row">
                 <div class="ach-stat"><span class="ach-num">1424</span><span class="ach-label">Rating</span></div>
                 <div class="ach-stat"><span class="ach-num">1452</span><span class="ach-label">Max</span></div>
               </div>
-              <div class="rating-bar"><div class="rating-fill" style="--pct:71%"></div></div>
+              <div class="rating-bar" role="progressbar" aria-valuenow="71" aria-valuemin="0" aria-valuemax="100" aria-label="CodeStudio rating progress">
+                <div class="rating-fill" style="--pct:71%"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div class="ach-section reveal">
-        <h3 class="ach-section-title">Hackathons & Competitions</h3>
+        <h3 class="ach-section-title">Hackathons &amp; Competitions</h3>
         <div class="ach-cards">
-          <div class="ach-card glass ach-trophy">
-            <div class="trophy-icon">🏆</div>
+          <div class="ach-card ach-trophy">
+            <div class="trophy-icon" aria-hidden="true">🏆</div>
             <div class="ach-details">
               <div class="ach-platform-name">Mercer | Mettl PromptCraft Challenge</div>
               <div class="ach-rank">Top 100 Nationally</div>
               <p class="ach-desc">Ranked among the top 100 participants nationwide in a competitive AI prompt engineering challenge. <a href="https://drive.google.com/file/d/1AGZWOAPmrTVNzHqI_rx_sjmVFOnY_5LX/view?usp=drive_link" target="_blank" rel="noopener" class="ach-cert-link">View Certificate ↗</a></p>
             </div>
           </div>
-          <div class="ach-card glass ach-trophy">
-            <div class="trophy-icon">🥇</div>
+          <div class="ach-card ach-trophy">
+            <div class="trophy-icon" aria-hidden="true">🥇</div>
             <div class="ach-details">
               <div class="ach-platform-name">Code Fusion 2.0 Hackathon</div>
               <div class="ach-rank">7th Place — Team Riwayat</div>
@@ -556,67 +547,67 @@
 <section class="section contact" id="contact">
   <div class="container">
     <div class="section-label reveal">// contact</div>
-    <h2 class="section-title reveal">Let's build something<br/><span class="gradient-text">intelligent together.</span></h2>
+    <h2 class="section-title reveal">Let's build something<br/><span style="color:var(--rust)">intelligent together.</span></h2>
     <div class="contact-grid">
       <div class="contact-left reveal">
         <p class="contact-intro">Whether you're a recruiter, founder, or fellow builder — I'm always open to interesting conversations and opportunities.</p>
         <div class="contact-links">
-          <a href="mailto:camp25674@gmail.com" class="contact-link glass">
-            <span class="contact-link-icon">✉</span>
+          <a href="mailto:camp25674@gmail.com" class="contact-link">
+            <span class="contact-link-icon" aria-hidden="true">@</span>
             <div>
               <div class="contact-link-label">Email</div>
               <div class="contact-link-val">camp25674@gmail.com</div>
             </div>
           </a>
-          <a href="tel:+916306155698" class="contact-link glass">
-            <span class="contact-link-icon">📞</span>
+          <a href="tel:+916306155698" class="contact-link">
+            <span class="contact-link-icon" aria-hidden="true">☏</span>
             <div>
               <div class="contact-link-label">Phone</div>
               <div class="contact-link-val">+91 63061 55698</div>
             </div>
           </a>
-          <a href="https://github.com/AdityaKumar3594" target="_blank" rel="noopener" class="contact-link glass">
-            <span class="contact-link-icon">⌥</span>
+          <a href="https://github.com/AdityaKumar3594" target="_blank" rel="noopener" class="contact-link" aria-label="GitHub profile">
+            <span class="contact-link-icon" aria-hidden="true">GH</span>
             <div>
               <div class="contact-link-label">GitHub</div>
               <div class="contact-link-val">github.com/AdityaKumar3594</div>
             </div>
           </a>
-          <a href="https://linkedin.com/in/adityakumar" target="_blank" rel="noopener" class="contact-link glass">
-            <span class="contact-link-icon">in</span>
+          <a href="https://www.linkedin.com/in/aditya-kumar-snu/" target="_blank" rel="noopener" class="contact-link" aria-label="LinkedIn profile">
+            <span class="contact-link-icon" aria-hidden="true">in</span>
             <div>
               <div class="contact-link-label">LinkedIn</div>
-              <div class="contact-link-val">linkedin.com/in/adityakumar</div>
+              <div class="contact-link-val">linkedin.com/in/aditya-kumar-snu</div>
             </div>
           </a>
-          <a href="https://leetcode.com/AdityaKumar3594" target="_blank" rel="noopener" class="contact-link glass">
-            <span class="contact-link-icon">LC</span>
+          <a href="https://leetcode.com/AdityaKumar3594" target="_blank" rel="noopener" class="contact-link" aria-label="LeetCode profile">
+            <span class="contact-link-icon" aria-hidden="true">LC</span>
             <div>
               <div class="contact-link-label">LeetCode</div>
               <div class="contact-link-val">leetcode.com/AdityaKumar3594</div>
             </div>
           </a>
         </div>
-        <a href="resume.pdf" class="btn btn-primary" download style="margin-top:2rem;display:inline-flex;align-items:center;gap:.5rem;">
-          ↓ Download Resume
-        </a>
+        <a href="resume.pdf" class="btn btn-primary" download style="margin-top:2rem;">↓ Download Resume</a>
       </div>
       <div class="contact-right reveal">
-        <form class="contact-form glass" id="contactForm">
+        <form class="contact-form" id="contactForm" novalidate>
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required />
+            <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name" />
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
           </div>
           <div class="form-group">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%">Send Message →</button>
-          <div class="form-success" id="formSuccess">Message sent! I'll get back to you soon.</div>
+          <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+            Message sent — I'll get back to you soon.
+          </div>
         </form>
       </div>
     </div>
@@ -627,17 +618,17 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-content">
-      <div class="footer-logo">AK<span class="logo-dot">.</span></div>
-      <div class="footer-motto">"Build with intent. Ship with precision."</div>
-      <div class="footer-links">
-        <a href="#hero">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
+      <div class="footer-logo">AK<span style="color:var(--rust)">.</span></div>
+      <div class="footer-motto">// systems that think. code that ships.</div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="https://github.com/AdityaKumar3594" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/aditya-kumar-snu/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://leetcode.com/AdityaKumar3594" target="_blank" rel="noopener" aria-label="LeetCode">LeetCode</a>
+        <a href="mailto:camp25674@gmail.com" aria-label="Email">Email</a>
+      </nav>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Aditya Kumar. Designed & built with care.</span>
+      &copy; 2025 Aditya Kumar &middot; Built with craft, not templates.
     </div>
   </div>
 </footer>
